@@ -1,4 +1,0 @@
-AngularJS
-=========
-
-AngularJS learning
