@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <div ng-controller="Student as student">
+        Name: {{student.data.name}} <br />  
+        Photo: <img ng-src="{{student.data.photo}}" alt="student-pic" /><br />  
+        Grade: {{student.data.grade}}<br />  
+        School: {{student.data.school}}<br />  
+        Teacher: {{student.data.teacher}}<br />  
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
