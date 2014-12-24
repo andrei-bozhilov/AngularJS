@@ -1,17 +1,80 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
 <head>
-    <title></title>
+    <title>Homework</title>
+    <style>
+        img {
+            width: 150px;
+        }
+
+        div {
+            display: inline-block;
+            width: 45%;
+            height: 250px;
+            vertical-align: top;
+            border: 1px solid black;
+            padding: 5px;
+            margin: 5px;
+        }
+
+            div div {
+                display: inline-block;
+                height: 240px;
+                margin: auto;
+                border: none;
+                padding: 10px;
+            }
+
+                div div h3 {
+                    text-align: center;
+                }
+
+                li{
+                    list-style:none;
+                }
+                span   {
+                    font-weight:bold;
+                }
+    </style>
 </head>
 <body>
 
+    <!--first task-->
     <div ng-controller="Student as student">
-        Name: {{student.data.name}} <br />  
-        Photo: <img ng-src="{{student.data.photo}}" alt="student-pic" /><br />  
-        Grade: {{student.data.grade}}<br />  
-        School: {{student.data.school}}<br />  
-        Teacher: {{student.data.teacher}}<br />  
+        Name: {{student.data.name}} <br />
+        Photo: <img ng-src="{{student.data.photo}}" alt="student-pic" /><br />
+        Grade: {{student.data.grade}}<br />
+        School: {{student.data.school}}<br />
+        Teacher: {{student.data.teacher}}<br />
     </div>
+
+    <!--second task-->
+    <div>
+        <input type="text" ng-model="pic" />
+        <img ng-src="{{pic}}" alt="Add pic url" />
+
+    </div>
+    <!--third task-->
+
+    <div ng-controller="Tiger as tiger" ng-style="{'background-color':'rgb(202, 202, 202)'}">
+        <div>
+            <p>
+                <h3>TIGER</h3>
+                <ul>
+                    <li><span>Name:</span> {{tiger.data.name | capitalize}}</li>
+                    <li><span>Born:</span> {{tiger.data.born | capitalize}}</li>
+                    <li><span>Birth Data:</span> {{tiger.data.birthData}}</li>
+                    <li><span>Live:</span> {{tiger.data.live | capitalize}}</li>
+
+                </ul>
+            </p>
+        </div>
+        <div>
+            <img ng-src="{{tiger.data.pic}}" alt="tiger" />
+        </div>
+    </div>
+
+
 
     <script src="bower_components/angular/angular.js"></script>
     <script src="app.js"></script>
